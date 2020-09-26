@@ -1,0 +1,3586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="近3年多模态相关论文列表 （2018-2020）key word 关键字 multi-modal or multimodal cross-domain or cross-modal multi-view Multivariate Generative model Collaborative   多模态应用场景   研究方向 应用场景 解释    跨模态的生成模型 机器翻译 (text-to-tex">
+<meta property="og:type" content="article">
+<meta property="og:title" content="多模态论文集">
+<meta property="og:url" content="http://yoursite.com/2020/06/17/%E5%A4%9A%E6%A8%A1%E6%80%81%E8%AE%BA%E6%96%87%E9%9B%86/index.html">
+<meta property="og:site_name" content="OnePiece of universal">
+<meta property="og:description" content="近3年多模态相关论文列表 （2018-2020）key word 关键字 multi-modal or multimodal cross-domain or cross-modal multi-view Multivariate Generative model Collaborative   多模态应用场景   研究方向 应用场景 解释    跨模态的生成模型 机器翻译 (text-to-tex">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-06-17T10:09:48.000Z">
+<meta property="article:modified_time" content="2020-06-18T06:17:54.000Z">
+<meta property="article:author" content="Boyu ZHAO">
+<meta property="article:tag" content="multi-modal">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2020/06/17/%E5%A4%9A%E6%A8%A1%E6%80%81%E8%AE%BA%E6%96%87%E9%9B%86/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>多模态论文集 | OnePiece of universal</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">OnePiece of universal</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">zby-universal</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">6</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">2</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">5</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/17/%E5%A4%9A%E6%A8%A1%E6%80%81%E8%AE%BA%E6%96%87%E9%9B%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/lufei.jpg">
+      <meta itemprop="name" content="Boyu ZHAO">
+      <meta itemprop="description" content="Master of computer science, Tianjin University">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="OnePiece of universal">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          多模态论文集
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-06-17 18:09:48" itemprop="dateCreated datePublished" datetime="2020-06-17T18:09:48+08:00">2020-06-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-06-18 14:17:54" itemprop="dateModified" datetime="2020-06-18T14:17:54+08:00">2020-06-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper/" itemprop="url" rel="index"><span itemprop="name">paper</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="近3年多模态相关论文列表-（2018-2020）"><a href="#近3年多模态相关论文列表-（2018-2020）" class="headerlink" title="近3年多模态相关论文列表 （2018-2020）"></a><a name="顶部">近3年多模态相关论文列表 （2018-2020）</a></h1><h2 id="key-word-关键字"><a href="#key-word-关键字" class="headerlink" title="key word 关键字"></a>key word 关键字</h2><ul>
+<li><font color="#FF2400" size=4>multi-modal or multimodal</font></li>
+<li><font color="#FF2400" size=4>cross-domain or cross-modal</font></li>
+<li><font color="#FF2400" size=4>multi-view</font></li>
+<li><font color="#FF2400" size=4>Multivariate</font></li>
+<li><font color="#FF2400" size=4>Generative model</font></li>
+<li><font color="#FF2400" size=4>Collaborative</font></li>
+</ul>
+<hr>
+<h2 id="多模态应用场景"><a href="#多模态应用场景" class="headerlink" title="多模态应用场景"></a>多模态应用场景</h2><table>
+<thead>
+<tr>
+<th align="center">研究方向</th>
+<th align="center">应用场景</th>
+<th align="center">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><font color="#FF2400" size=4>跨模态的生成模型</font></td>
+<td align="center">机器翻译 (text-to-text)、</td>
+<td align="center">图像、文本、语音等多模态数据相互转换生成</td>
+</tr>
+<tr>
+<td align="center"><font color="#FF2400" size=4>多模态人脸反欺诈</font></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><font color="#FF2400" size=4>动态手势识别</font></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><font color="#FF2400" size=4>视觉理解 </font></td>
+<td align="center">VQA，textVQA</td>
+<td align="center">即<strong>Object Referring</strong>，给定查询语句，在图像或者视频中找到对应信息</td>
+</tr>
+<tr>
+<td align="center"><font color="#FF2400" size=4>跨模态检索</font></td>
+<td align="center">以图搜图、语音(语言)搜图</td>
+<td align="center">大多基于hash算法做检索</td>
+</tr>
+<tr>
+<td align="center"><font color="#FF2400" size=4>多模态关系推理 </font></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><font color="#FF2400" size=4>视觉语言导航 (Visual Language Navigation,VLN) </font></td>
+<td align="center">智能机器人</td>
+<td align="center">属于强化学习：用自然语言(NLP)指令让智能体(agent)在真实环境中导航</td>
+</tr>
+<tr>
+<td align="center"><font color="#FF2400" size=4>多模态融合架构搜索 (NAS)</font></td>
+<td align="center"></td>
+<td align="center">在所有可能的融合架构空间中，找到最适合特定数据集性能的架构</td>
+</tr>
+<tr>
+<td align="center"><font color="#FF2400" size=4>基本任务：预测、分类、聚类等</font></td>
+<td align="center">轨迹预测，行人识别</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><font color="#FF2400" size=4>视觉问答(VQA)</font></td>
+<td align="center">智能机器人</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><font color="#FF2400" size=4>即时字幕</font></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<a id="more"></a>
+
+<hr>
+<h2 id="点击跳转"><a href="#点击跳转" class="headerlink" title="点击跳转"></a>点击跳转</h2><ul>
+<li><p><a href="#ICLR"><font color="red" size=4>ICLR</font></a> (7)</p>
+<ul>
+<li><a href="#ICLR-2020"><font color="red" size=4>2020</font></a>: 1篇</li>
+<li><a href="#ICLR-2019"><font color="red" size=4>2019</font></a>: 5篇</li>
+<li><a href="#ICLR-2018"><font color="red" size=4>2018</font></a>: 1篇</li>
+<li><a href="#ICLR-2017"><font color="red" size=4>2017</font></a>: 1篇</li>
+</ul>
+</li>
+<li><p><a href="#ICML"><font color="red" size=4>ICML</font></a> (7)</p>
+<ul>
+<li><a href="#ICML-2020"><font color="red" size=4>2020</font></a>: 1篇</li>
+<li><a href="#ICML-2019"><font color="red" size=4>2019</font></a>: 3篇</li>
+<li><a href="#ICML-2018"><font color="red" size=4>2018</font></a>: 3篇</li>
+</ul>
+</li>
+<li><p><a href="#NIPS"><font color="red" size=4>NIPS</font></a> (12)</p>
+<ul>
+<li><a href="#NIPS-2020"><font color="red" size=4>2020</font></a>: </li>
+<li><a href="#NIPS-2019"><font color="red" size=4>2019</font></a>: 7篇</li>
+<li><a href="#NIPS-2018"><font color="red" size=4>2018</font></a>: 5篇</li>
+</ul>
+</li>
+<li><p><a href="#CVPR"><font color="red" size=4>CVPR</font></a> (105)</p>
+<ul>
+<li><a href="#CVPR-2020"><font color="red" size=4>2020</font></a>: 38篇 </li>
+<li><a href="#CVPR-2019"><font color="red" size=4>2019</font></a>: 23篇</li>
+<li><a href="#CVPR-2018"><font color="red" size=4>2018</font></a>: 10篇</li>
+<li><a href="#CVPR-2017"><font color="red" size=4>2017</font></a>: 24篇</li>
+<li><a href="#CVPR-2016"><font color="red" size=4>2016</font></a>: 10篇</li>
+</ul>
+</li>
+<li><p><a href="#ICCV"><font color="red" size=4>ICCV</font></a> (27)</p>
+<ul>
+<li><a href="#ICCV-2019"><font color="red" size=4>2019</font></a>: 16篇</li>
+<li><a href="#ICCV-2017"><font color="red" size=4>2017</font></a>: 11篇</li>
+</ul>
+</li>
+<li><p><a href="#ECCV"><font color="red" size=4>ECCV</font></a> (14)</p>
+<ul>
+<li><a href="#ECCV-2020"><font color="red" size=4>2020</font></a>: </li>
+<li><a href="#ECCV-2018"><font color="red" size=4>2018</font></a>: 14篇</li>
+</ul>
+</li>
+<li><p><a href="#IJCAI"><font color="red" size=4>IJCAI </font></a> (63)</p>
+<ul>
+<li><a href="#IJCAI-2020"><font color="red" size=4>2020</font></a>: 8篇</li>
+<li><a href="#IJCAI-2019"><font color="red" size=4>2019</font></a>: 13篇</li>
+<li><a href="#IJCAI-2018"><font color="red" size=4>IJCAI </font></a>: 13篇</li>
+<li><a href="#IJCAI-2017"><font color="red" size=4>2017</font></a>: 15篇</li>
+<li><a href="#IJCAI-2016"><font color="red" size=4>2016</font></a>: 7篇</li>
+<li><a href="#IJCAI-2015"><font color="red" size=4>2015</font></a>: 7篇</li>
+</ul>
+</li>
+<li><p><a href="#AAAI"><font color="red" size=4>AAAI</font></a> (83)</p>
+<ul>
+<li><a href="#AAAI-2020"><font color="red" size=4>2020</font></a>: 29篇</li>
+<li><a href="#AAAI-2019"><font color="red" size=4>2019</font></a>: 17篇</li>
+<li><a href="#AAAI-2018"><font color="red" size=4>2018</font></a>: 20篇</li>
+<li><a href="#AAAI-2017"><font color="red" size=4>2017</font></a>: 7篇</li>
+<li><a href="#AAAI-2016"><font color="red" size=4>2016</font></a>: 6篇</li>
+<li><a href="#AAAI-2015"><font color="red" size=4>AAAI</font></a>: 4篇</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><a href="#T-PAMI"><font color="red" size=4>T-PAMI</font></a> (8)</p>
+<ul>
+<li>2020: 0篇</li>
+<li>2019: 3篇</li>
+<li>2018: 5篇</li>
+</ul>
+</li>
+<li><p><a href="#IJCV"><font color="red" size=4>IJCV</font></a> (4)</p>
+<ul>
+<li>2020: 2篇</li>
+<li>2019: 1篇</li>
+<li>2018: 1篇</li>
+</ul>
+</li>
+<li><p><a href="#JMLR"><font color="red" size=4>JMLR</font></a></p>
+<ul>
+<li>2020: 1篇 多模态推荐系统</li>
+<li>2019: 0篇</li>
+<li>2017-2018: 1篇 词袋工具</li>
+<li>2016: 1篇 手势识别</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="International-Conference-on-Learning-Representations-ICLR"><a href="#International-Conference-on-Learning-Representations-ICLR" class="headerlink" title="International Conference on Learning Representations (ICLR)"></a><a name="ICLR"><em>International Conference on Learning Representations</em> (ICLR)</a></h2><table>
+<thead>
+<tr>
+<th align="center">Year</th>
+<th align="center">Author/mechanism</th>
+<th align="center">Title</th>
+<th align="center">Summary</th>
+<th align="center">Valuable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a name="ICLR-2020">2020</a></td>
+<td align="center"></td>
+<td align="center"><a href="https://iclr.cc/virtual_2020/poster_B1xwcyHFDr.html" target="_blank" rel="noopener"><strong>Learning Robust Representations via Multi-View Information Bottleneck <font color="red">(post)</font></strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="ICLR-2019">2019</a></td>
+<td align="center"></td>
+<td align="center"><a href="https://openreview.net/forum?id=HJxyAjRcFX" target="_blank" rel="noopener"><strong>Harmonizing Maximum Likelihood with GANs for Multimodal Conditional Generation<font color="red">(post)</font></strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://openreview.net/forum?id=B1exrnCcF7" target="_blank" rel="noopener"><strong>Disjoint Mapping Network for Cross-modal Matching of Voices and Faces<font color="red">(post)</font></strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://openreview.net/forum?id=B1xJAsA5F7" target="_blank" rel="noopener"><strong>Learning Multimodal Graph-to-Graph Translation for Molecule Optimization<font color="red">(post)</font></strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://openreview.net/forum?id=BkgBvsC9FQ" target="_blank" rel="noopener"><strong>DialogWAE: Multimodal Response Generation with Conditional Wasserstein Auto-Encoder<font color="red">(post)</font></strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://openreview.net/forum?id=rygqqsA9KX" target="_blank" rel="noopener"><strong>Learning Factorized Multimodal Representations<font color="red">(post)</font></strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="ICLR-2018">2018</a></td>
+<td align="center"></td>
+<td align="center"><a href="https://openreview.net/forum?id=B1QRgziT-" target="_blank" rel="noopener"><strong>Spectral Normalization for Generative Adversarial Networks <font color="red">(oral)</font></strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://openreview.net/forum?id=HkL7n1-0b" target="_blank" rel="noopener"><strong>Wasserstein Auto-Encoders <font color="red">(oral)</font></strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://openreview.net/forum?id=rkmu5b0a-" target="_blank" rel="noopener"><strong>MGAN: Training Generative Adversarial Nets with Multiple Generators<font color="red">(post)</font></strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://openreview.net/forum?id=HyRnez-RW" target="_blank" rel="noopener"><strong>Multi-Mention Learning for Reading Comprehension with Neural Cascades<font color="red">(post)</font></strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://openreview.net/forum?id=ByRWCqvT-" target="_blank" rel="noopener"><strong>Learning to cluster in order to transfer across domains and task<font color="red">(post)</font></strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="ICLR-2017">2017</a></td>
+<td align="center"></td>
+<td align="center"><a href="https://openreview.net/forum?id=Hy-2G6ile" target="_blank" rel="noopener"><strong>Gated Multimodal Units for Information Fusion <font color="red">(Workshop Track)</font></strong> </a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="https://openreview.net/forum?id=rJJ3YU5ge" target="_blank" rel="noopener"><strong>Is a picture worth a thousand words? A Deep Multi-Modal Fusion Architecture for Product Classification in e-commerce <font color="red">(Reject)</font></strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="https://openreview.net/forum?id=Hk8rlUqge" target="_blank" rel="noopener"><strong>Joint Multimodal Learning with Deep Generative Models <font color="red">(Reject)</font></strong> </a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="https://openreview.net/forum?id=BJ9fZNqle" target="_blank" rel="noopener"><strong>Multi-modal Variational Encoder-Decoders<font color="red">(Reject)</font></strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p><a href="#顶部">返回顶部</a></p>
+<hr>
+<h2 id="International-Conference-on-Machine-Learning-ICML"><a href="#International-Conference-on-Machine-Learning-ICML" class="headerlink" title="International Conference on Machine Learning (ICML)"></a><a name="ICML"><em>International Conference on Machine Learning</em> (ICML)</a></h2><table>
+<thead>
+<tr>
+<th align="center">Year</th>
+<th align="center">Author/mechanism</th>
+<th align="center">Title</th>
+<th align="center">Summary</th>
+<th align="center">Valuable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="ICML-2020">2020</a></td>
+<td align="center">Yoshua Bengio</td>
+<td align="center"><a href="https://arxiv.org/abs/1906.10335" target="_blank" rel="noopener"><strong>Perceptual Generative Autoencoders</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">Google</td>
+<td align="center"><strong>Interpretable, Multidimensional, Multimodal Anomaly Detection with Negative Sampling for Detection of Device Failure</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><strong>Graph Optimal Transport for Cross-Domain Alignment</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><strong>The Differentiable Cross-Entropy Method</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><strong>Graph Representation Learning by Maximizing Mutual Information Between Spatial and Spectral Views</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><strong>InfoGAN-CR: Disentangling Generative Adversarial Networks with Contrastive Regularizers</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><strong>Conditional Augmentation for Generative Modeling</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="ICML-2019">2019</a></td>
+<td align="center"></td>
+<td align="center"><a href="http://proceedings.mlr.press/v97/fong19a/fong19a.pdf" target="_blank" rel="noopener">*<em>Scalable Nonparametric Sampling from Multimodal Posteriors with the Posterior Bootstrap *</em></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center">*<em>Learning Generative Models across Incomparable Spaces *</em></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center">*<em>Wasserstein of Wasserstein Loss for Learning Generative Models *</em></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><strong>EMI: Exploration with Mutual Information</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><strong>Self-Attention Generative Adversarial Networks</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><strong><a href="https://icml.cc/Conferences/2019/Schedule?showEvent=4621" target="_blank" rel="noopener">Multivariate-Information Adversarial Ensemble for Scalable Joint Distribution Matching</a></strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><strong>Entropic GANs meet VAEs: A Statistical Approach to Compute Sample Likelihoods in GANs</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><strong>Non-Parametric Priors For Generative Adversarial Networks</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><strong>Lipschitz Generative Adversarial Nets</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><strong>Self-Attention Generative Adversarial Networks</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><strong>Disentangling Disentanglement in Variational Autoencoders</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><strong>Hierarchical Decompositional Mixtures of Variational Autoencoders</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><strong><a href="https://icml.cc/media/Slides/icml/2019/hallb(12-16-00)-12-17-00-5118-sparse_multi-ch.pdf" target="_blank" rel="noopener">Sparse Multi-Channel Variational Autoencoder for the Joint Analysis of Heterogeneous Data</a></strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><strong>MIWAE: Deep Generative Modelling and Imputation of Incomplete Data Sets</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="ICML-2018">2018</a></td>
+<td align="center"></td>
+<td align="center"><strong>Learn from Your Neighbor: Learning Multi-modal Mappings from Sparse Annotations</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><strong>End-to-End Learning for the Deep Multivariate Probit Model</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><strong>A probabilistic framework for multi-view feature learning with many-to-many associations via neural networks</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p><a href="#顶部">返回顶部</a></p>
+<hr>
+<h2 id="Neural-Information-Processing-Systems-NIPS"><a href="#Neural-Information-Processing-Systems-NIPS" class="headerlink" title="Neural Information Processing Systems (NIPS)"></a><a name="NIPS"><em>Neural Information Processing Systems (NIPS)</em></a></h2><table>
+<thead>
+<tr>
+<th align="center">Year</th>
+<th align="center">Author/mechanism</th>
+<th align="center">Title</th>
+<th align="center">Summary</th>
+<th align="center">Valuable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a name="NIPS-2020">2020</a></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="NIPS-2019">2019</a></td>
+<td align="center"></td>
+<td align="center"><a href="https://papers.nips.cc/paper/8731-adaptive-cross-modal-few-shot-learning" target="_blank" rel="noopener">Adaptive Cross-Modal Few-shot Learning</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://papers.nips.cc/paper/9262-cross-modal-learning-with-adversarial-samples" target="_blank" rel="noopener">Cross-Modal Learning with Adversarial Samples</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://papers.nips.cc/paper/9381-deep-multimodal-multilinear-fusion-with-high-order-polynomial-pooling" target="_blank" rel="noopener">Deep Multimodal Multilinear Fusion with High-order Polynomial Pooling</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://papers.nips.cc/paper/9702-variational-mixture-of-experts-autoencoders-for-multi-modal-deep-generative-models" target="_blank" rel="noopener">Variational Mixture-of-Experts Autoencoders for Multi-Modal Deep Generative Models</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://papers.nips.cc/paper/8655-cross-attention-network-for-few-shot-classification" target="_blank" rel="noopener">Cross Attention Network for Few-shot Classification</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://papers.nips.cc/paper/9450-cross-domain-transferability-of-adversarial-perturbations" target="_blank" rel="noopener">Cross-Domain Transferability of Adversarial Perturbations</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://papers.nips.cc/paper/9686-learning-representations-by-maximizing-mutual-information-across-views" target="_blank" rel="noopener">Learning Representations by Maximizing Mutual Information Across Views</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="NIPS-2018">2018</a></td>
+<td align="center"></td>
+<td align="center"><a href="https://papers.nips.cc/paper/7801-multimodal-generative-models-for-scalable-weakly-supervised-learning" target="_blank" rel="noopener">Multimodal Generative Models for Scalable Weakly-Supervised Learning</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://papers.nips.cc/paper/7817-mental-sampling-in-multimodal-representations" target="_blank" rel="noopener">Mental Sampling in Multimodal Representations</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://papers.nips.cc/paper/7965-unsupervised-cross-modal-alignment-of-speech-and-text-embedding-spaces" target="_blank" rel="noopener">Unsupervised Cross-Modal Alignment of Speech and Text Embedding Spaces</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://papers.nips.cc/paper/8094-generalized-cross-entropy-loss-for-training-deep-neural-networks-with-noisy-labels" target="_blank" rel="noopener">Generalized Cross Entropy Loss for Training Deep Neural Networks with Noisy Labels</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://papers.nips.cc/paper/8193-life-long-disentangled-representation-learning-with-cross-domain-latent-homologies" target="_blank" rel="noopener">Life-Long Disentangled Representation Learning with Cross-Domain Latent Homologies</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://papers.nips.cc/paper/7290-text-adaptive-generative-adversarial-networks-manipulating-images-with-natural-language" target="_blank" rel="noopener">Text-Adaptive Generative Adversarial Networks: Manipulating Images with Natural Language</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://papers.nips.cc/paper/7671-flexible-and-accurate-inference-and-learning-for-deep-generative-models" target="_blank" rel="noopener">Flexible and accurate inference and learning for deep generative models</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p><a href="#顶部">返回顶部</a></p>
+<hr>
+<h2 id="2016Computer-Vision-and-Pattern-Recognition-CVPR"><a href="#2016Computer-Vision-and-Pattern-Recognition-CVPR" class="headerlink" title="2016Computer Vision and Pattern Recognition (CVPR)"></a><a name="CVPR">2016<em>Computer Vision and Pattern Recognition (CVPR)</em></a></h2><table>
+<thead>
+<tr>
+<th align="center">Year</th>
+<th align="center">Author/mechanism</th>
+<th align="center">Title</th>
+<th align="center">Summary</th>
+<th align="center">Valuable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a name="CVPR-2020">2020</a></td>
+<td align="center">英国布里斯托尔大学（Bristol）</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Munro_Multi-Modal_Domain_Adaptation_for_Fine-Grained_Action_Recognition_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Multi-Modal Domain Adaptation for Fine-Grained Action Recognition</a></td>
+<td align="center"></td>
+<td align="center">域适应（分类）</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">合肥工业大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Hu_Creating_Something_From_Nothing_Unsupervised_Knowledge_Distillation_for_Cross-Modal_Hashing_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Creating Something From Nothing: Unsupervised Knowledge Distillation for Cross-Modal Hashing</a></td>
+<td align="center"></td>
+<td align="center">跨模态检索（基于Hash）</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">德国弗莱堡大学(freiburg)</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Makansi_Multimodal_Future_Localization_and_Emergence_Prediction_for_Objects_in_Egocentric_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Multimodal Future Localization and Emergence Prediction for Objects in Egocentric View With a Reachability Prior</a></td>
+<td align="center"></td>
+<td align="center">多模态预测</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">法国自动化研究所（Inria）</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Abrevaya_Cross-Modal_Deep_Face_Normals_With_Deactivable_Skip_Connections_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Cross-Modal Deep Face Normals With Deactivable Skip Connections</a></td>
+<td align="center"></td>
+<td align="center">跨模态生成 （均为图像）</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">清华大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Zhou_Monocular_Real-Time_Hand_Shape_and_Motion_Capture_Using_Multi-Modal_Data_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Monocular Real-Time Hand Shape and Motion Capture Using Multi-Modal Data</a></td>
+<td align="center"></td>
+<td align="center">姿态估计</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">华中科技大学 &amp; 北京大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Zhu_Semantically_Multi-Modal_Image_Synthesis_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Semantically Multi-Modal Image Synthesis</a></td>
+<td align="center"></td>
+<td align="center">语义合成图像 （用不同语义来操控合成结果）</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">美国罗格斯大学 (Rutgers)</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Zhao_Knowledge_As_Priors_Cross-Modal_Knowledge_Generalization_for_Datasets_Without_Superior_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Knowledge As Priors: Cross-Modal Knowledge Generalization for Datasets Without Superior Knowledge</a></td>
+<td align="center"></td>
+<td align="center">跨模态知识蒸馏</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">南京理工大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_Cross-Modal_Pattern-Propagation_for_RGB-T_Tracking_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Cross-Modal Pattern-Propagation for RGB-T Tracking</a></td>
+<td align="center"></td>
+<td align="center">tracking (追踪)</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">fackbook &amp; UC伯克利</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Hu_Iterative_Answer_Prediction_With_Pointer-Augmented_Multimodal_Transformers_for_TextVQA_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Iterative Answer Prediction With Pointer-Augmented Multimodal Transformers for TextVQA</a></td>
+<td align="center"></td>
+<td align="center">文本视觉问答(TextVQA)</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">韩国科技院（Korea Advanced Institute of Science and Technolog）&amp; 三星 （Samsung）</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Kim_Modality_Shifting_Attention_Network_for_Multi-Modal_Video_Question_Answering_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Modality Shifting Attention Network for Multi-Modal Video Question Answering</a></td>
+<td align="center"></td>
+<td align="center">视觉问答VQA</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">港中文 &amp; 商汤 联合实验室</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Rao_A_Local-to-Global_Approach_to_Multi-Modal_Movie_Scene_Segmentation_CVPR_2020_paper.pdf" target="_blank" rel="noopener">A Local-to-Global Approach to Multi-Modal Movie Scene Segmentation</a></td>
+<td align="center"></td>
+<td align="center">分割</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">韩国科技院（Korea Advanced Institute of Science and Technolog）</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Choi_Hi-CMD_Hierarchical_Cross-Modality_Disentanglement_for_Visible-Infrared_Person_Re-Identification_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Hi-CMD: Hierarchical Cross-Modality Disentanglement for Visible-Infrared Person Re-Identification</a></td>
+<td align="center"></td>
+<td align="center">person ReID</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">牛津大学 &amp; Google &amp; DeepMind</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Nagrani_Speech2Action_Cross-Modal_Supervision_for_Action_Recognition_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Speech2Action: Cross-Modal Supervision for Action Recognition</a></td>
+<td align="center"></td>
+<td align="center">行为识别</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">英国萨里大学 &amp; 伦敦大学玛丽皇后学院</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Pang_Solving_Mixed-Modal_Jigsaw_Puzzle_for_Fine-Grained_Sketch-Based_Image_Retrieval_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Solving Mixed-Modal Jigsaw Puzzle for Fine-Grained Sketch-Based Image Retrieval</a></td>
+<td align="center"></td>
+<td align="center">拼图游戏(图像检索)</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">中科院信息所 &amp; 中科大</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Huang_Referring_Image_Segmentation_via_Cross-Modal_Progressive_Comprehension_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Referring Image Segmentation via Cross-Modal Progressive Comprehension</a></td>
+<td align="center"></td>
+<td align="center">分割</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">中科院自动化所</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Jing_Cross-Modal_Cross-Domain_Moment_Alignment_Network_for_Person_Search_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Cross-Modal Cross-Domain Moment Alignment Network for Person Search</a></td>
+<td align="center"></td>
+<td align="center">跨模态检索</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">中国科技大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Zhu_Vision-Dialog_Navigation_by_Exploring_Cross-Modal_Memory_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Vision-Dialog Navigation by Exploring Cross-Modal Memory</a></td>
+<td align="center"></td>
+<td align="center">视觉对话导航</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">北京航空航天大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Liao_A_Real-Time_Cross-Modality_Correlation_Filtering_Method_for_Referring_Expression_Comprehension_CVPR_2020_paper.pdf" target="_blank" rel="noopener">A Real-Time Cross-Modality Correlation Filtering Method for Referring Expression Comprehension</a></td>
+<td align="center"></td>
+<td align="center">视觉理解</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">中国科技大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Wei_Multi-Modality_Cross_Attention_Network_for_Image_and_Sentence_Matching_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Multi-Modality Cross Attention Network for Image and Sentence Matching</a></td>
+<td align="center"></td>
+<td align="center">图像文本匹配</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">美国Aptiv (汽车公司)</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Caesar_nuScenes_A_Multimodal_Dataset_for_Autonomous_Driving_CVPR_2020_paper.pdf" target="_blank" rel="noopener">nuScenes: A Multimodal Dataset for Autonomous Driving</a></td>
+<td align="center"></td>
+<td align="center">自动驾驶</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">奔驰公司</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Bijelic_Seeing_Through_Fog_Without_Seeing_Fog_Deep_Multimodal_Sensor_Fusion_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Seeing Through Fog Without Seeing Fog: Deep Multimodal Sensor Fusion in Unseen Adverse Weather</a></td>
+<td align="center"></td>
+<td align="center">多传感器融合</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">法国自动化研究所（Inria）</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Jaritz_xMUDA_Cross-Modal_Unsupervised_Domain_Adaptation_for_3D_Semantic_Segmentation_CVPR_2020_paper.pdf" target="_blank" rel="noopener">xMUDA: Cross-Modal Unsupervised Domain Adaptation for 3D Semantic Segmentation</a></td>
+<td align="center"></td>
+<td align="center">图像分割 （3D点云和2D图像）</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">清华大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Chen_IMRAM_Iterative_Matching_With_Recurrent_Attention_Memory_for_Cross-Modal_Image-Text_CVPR_2020_paper.pdf" target="_blank" rel="noopener">IMRAM: Iterative Matching With Recurrent Attention Memory for Cross-Modal Image-Text Retrieval</a></td>
+<td align="center"></td>
+<td align="center">跨模态检索</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">Facebook</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_What_Makes_Training_Multi-Modal_Classification_Networks_Hard_CVPR_2020_paper.pdf" target="_blank" rel="noopener">What Makes Training Multi-Modal Classification Networks Hard?</a></td>
+<td align="center"></td>
+<td align="center">多模态分类</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">中科院计算所</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Gao_Multi-Modal_Graph_Neural_Network_for_Joint_Reasoning_on_Vision_and_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Multi-Modal Graph Neural Network for Joint Reasoning on Vision and Scene Text</a></td>
+<td align="center"></td>
+<td align="center">视觉问答</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">电子科技大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Wei_Universal_Weighting_Metric_Learning_for_Cross-Modal_Matching_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Universal Weighting Metric Learning for Cross-Modal Matching</a></td>
+<td align="center"></td>
+<td align="center">跨模态匹配</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">Microsoft &amp; 美国乔治亚理工 (Georgia Tech)</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Joze_MMTM_Multimodal_Transfer_Module_for_CNN_Fusion_CVPR_2020_paper.pdf" target="_blank" rel="noopener">MMTM: Multimodal Transfer Module for CNN Fusion</a></td>
+<td align="center"></td>
+<td align="center">多模态融合</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">中国科技大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Lu_Cross-Modality_Person_Re-Identification_With_Shared-Specific_Feature_Transfer_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Cross-Modality Person Re-Identification With Shared-Specific Feature Transfer</a></td>
+<td align="center"></td>
+<td align="center">person ReID</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">以色列特拉维夫大学（Tel Aviv）</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Arar_Unsupervised_Multi-Modal_Image_Registration_via_Geometry_Preserving_Image-to-Image_Translation_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Unsupervised Multi-Modal Image Registration via Geometry Preserving Image-to-Image Translation</a></td>
+<td align="center"></td>
+<td align="center">多模态配准（图像配准）</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">上海交通大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Luo_Where_What_Whether_Multi-Modal_Learning_Meets_Pedestrian_Detection_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Where, What, Whether: Multi-Modal Learning Meets Pedestrian Detection</a></td>
+<td align="center"></td>
+<td align="center">行人检测</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">美国加州理工学院 &amp; Aptiv (汽车公司)</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Phan-Minh_CoverNet_Multimodal_Behavior_Prediction_Using_Trajectory_Sets_CVPR_2020_paper.pdf" target="_blank" rel="noopener">CoverNet: Multimodal Behavior Prediction Using Trajectory Sets</a></td>
+<td align="center"></td>
+<td align="center">行为预测</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">美国马里兰大学 （Maryland）</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Mittal_EmotiCon_Context-Aware_Multimodal_Emotion_Recognition_Using_Freges_Principle_CVPR_2020_paper.pdf" target="_blank" rel="noopener">EmotiCon: Context-Aware Multimodal Emotion Recognition Using Frege’s Principle</a></td>
+<td align="center"></td>
+<td align="center">情感分类</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">Xpeng motors （中国电动汽车初创公司）</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Xu_Discriminative_Multi-Modality_Speech_Recognition_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Discriminative Multi-Modality Speech Recognition</a></td>
+<td align="center"></td>
+<td align="center">语音识别 （视频和语音）</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">浙江大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Fu_MCEN_Bridging_Cross-Modal_Gap_between_Cooking_Recipes_and_Dish_Images_CVPR_2020_paper.pdf" target="_blank" rel="noopener">MCEN: Bridging Cross-Modal Gap between Cooking Recipes and Dish Images with Latent Variable Model</a></td>
+<td align="center"></td>
+<td align="center">跨模态检索（食品检索）</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">Kakao Brain （韩国聊天软件公司）</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Kim_Hypergraph_Attention_Networks_for_Multimodal_Learning_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Hypergraph Attention Networks for Multimodal Learning</a></td>
+<td align="center"></td>
+<td align="center">多模态问答</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center">中科院软件所</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Zhou_End-to-End_Adversarial-Attention_Network_for_Multi-Modal_Clustering_CVPR_2020_paper.pdf" target="_blank" rel="noopener">End-to-End Adversarial-Attention Network for Multi-Modal Clustering</a></td>
+<td align="center"></td>
+<td align="center">多模态聚类</td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Abavisani_Multimodal_Categorization_of_Crisis_Events_in_Social_Media_CVPR_2020_paper.pdf" target="_blank" rel="noopener">Multimodal Categorization of Crisis Events in Social Media</a></td>
+<td align="center"></td>
+<td align="center">多模态分类</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="CVPR-2019">2019</a></td>
+<td align="center">沙特阿卜杜拉国王科技大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Alharbi_Latent_Filter_Scaling_for_Multimodal_Unsupervised_Image-To-Image_Translation_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Latent Filter Scaling for Multimodal Unsupervised Image-To-Image Translation</a></td>
+<td align="center"></td>
+<td align="center">image-to-image 无监督转换</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">南加州大学 &amp; 阿里巴巴(美国)</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Su_Unsupervised_Multi-Modal_Neural_Machine_Translation_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Unsupervised Multi-Modal Neural Machine Translation</a></td>
+<td align="center"></td>
+<td align="center">基于图像的语言之间翻译无监督学习</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">京东 (JD)</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhang_A_Dataset_and_Benchmark_for_Large-Scale_Multi-Modal_Face_Anti-Spoofing_CVPR_2019_paper.pdf" target="_blank" rel="noopener">A Dataset and Benchmark for Large-Scale Multi-Modal Face Anti-Spoofing</a></td>
+<td align="center"></td>
+<td align="center">人脸反欺诈</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">香港中文大学 &amp; 商汤</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Abavisani_Improving_the_Performance_of_Unimodal_Dynamic_Hand-Gesture_Recognition_With_Multimodal_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Improving the Performance of Unimodal Dynamic Hand-Gesture Recognition With Multimodal Training</a></td>
+<td align="center"></td>
+<td align="center">动态手势识别（3D视频）</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">香港中文大学 &amp; 商汤</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Liu_Improving_Referring_Expression_Grounding_With_Cross-Modal_Attention-Guided_Erasing_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Improving Referring Expression Grounding With Cross-Modal Attention-Guided Erasing</a></td>
+<td align="center"></td>
+<td align="center">视觉理解</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">Microsoft Cloud &amp; AI</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Song_Polysemous_Visual-Semantic_Embedding_for_Cross-Modal_Retrieval_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Polysemous Visual-Semantic Embedding for Cross-Modal Retrieval</a></td>
+<td align="center"></td>
+<td align="center">跨模态检索</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">法国索邦大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Cadene_MUREL_Multimodal_Relational_Reasoning_for_Visual_Question_Answering_CVPR_2019_paper.pdf" target="_blank" rel="noopener">MUREL: Multimodal Relational Reasoning for Visual Question Answering</a></td>
+<td align="center"></td>
+<td align="center">视觉问答</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">京东(JD)</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Fan_Heterogeneous_Memory_Enhanced_Multimodal_Attention_Model_for_Video_Question_Answering_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Heterogeneous Memory Enhanced Multimodal Attention Model for Video Question Answering</a></td>
+<td align="center"></td>
+<td align="center">视觉问答</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">香港科大</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Luo_ContextDesc_Local_Descriptor_Augmentation_With_Cross-Modality_Context_CVPR_2019_paper.pdf" target="_blank" rel="noopener">ContextDesc: Local Descriptor Augmentation With Cross-Modality Context</a></td>
+<td align="center"></td>
+<td align="center">跨模态特征匹配</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">香港大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Yang_Cross-Modal_Relationship_Inference_for_Grounding_Referring_Expressions_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Cross-Modal Relationship Inference for Grounding Referring Expressions</a></td>
+<td align="center"></td>
+<td align="center">视觉理解</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">美国匹兹堡大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Murrugarra-Llerena_Cross-Modality_Personalization_for_Retrieval_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Cross-Modality Personalization for Retrieval</a></td>
+<td align="center"></td>
+<td align="center">跨模态检索</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">加州大学巴拉拉分校&amp;Microsoft</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_Reinforced_Cross-Modal_Matching_and_Self-Supervised_Imitation_Learning_for_Vision-Language_Navigation_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Reinforced Cross-Modal Matching and Self-Supervised Imitation Learning for Vision-Language Navigation</a></td>
+<td align="center"></td>
+<td align="center">视觉语言导航（强化学习）</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">香港中文大学 &amp; 商汤 Joint lab</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Gao_Dynamic_Fusion_With_Intra-_and_Inter-Modality_Attention_Flow_for_Visual_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Dynamic Fusion With Intra- and Inter-Modality Attention Flow for Visual Question Answering</a></td>
+<td align="center"></td>
+<td align="center">视觉问答</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">法国诺曼底卡昂大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Perez-Rua_MFAS_Multimodal_Fusion_Architecture_Search_CVPR_2019_paper.pdf" target="_blank" rel="noopener">MFAS: Multimodal Fusion Architecture Search</a></td>
+<td align="center"></td>
+<td align="center">多模态融合架构搜索 (NAS)</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">德国弗莱堡大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Makansi_Overcoming_Limitations_of_Mixture_Density_Networks_A_Sampling_and_Fitting_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Overcoming Limitations of Mixture Density Networks: A Sampling and Fitting Framework for Multimodal Future Prediction</a></td>
+<td align="center"></td>
+<td align="center">未来预测</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">美国罗切斯特大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Chen_Hierarchical_Cross-Modal_Talking_Face_Generation_With_Dynamic_Pixel-Wise_Loss_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Hierarchical Cross-Modal Talking Face Generation With Dynamic Pixel-Wise Loss</a></td>
+<td align="center"></td>
+<td align="center">跨模态生成（语音生成视频）</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">Preferred Networks (日本丰田收购的独角兽AI公司) &amp; 东京大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Kanehira_Multimodal_Explanations_by_Predicting_Counterfactuality_in_Videos_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Multimodal Explanations by Predicting Counterfactuality in Videos</a></td>
+<td align="center"></td>
+<td align="center">多模态解释(用文本解释图像分类结果的原因)</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">西北工业大学 (聂飞平组)</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Hu_Deep_Multimodal_Clustering_for_Unsupervised_Audiovisual_Learning_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Deep Multimodal Clustering for Unsupervised Audiovisual Learning</a></td>
+<td align="center"></td>
+<td align="center">多模态聚类 （图像和音频）</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">四川大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhen_Deep_Supervised_Cross-Modal_Retrieval_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Deep Supervised Cross-Modal Retrieval</a></td>
+<td align="center"></td>
+<td align="center">跨模态检索 （图像与文本）</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">加拿大马尼托巴大学 &amp; 上海大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Ye_Cross-Modal_Self-Attention_Network_for_Referring_Image_Segmentation_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Cross-Modal Self-Attention Network for Referring Image Segmentation</a></td>
+<td align="center"></td>
+<td align="center">基于文本描述的图像分割</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">麻省理工人工智能lab (MIT CSAIL)</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Li_Connecting_Touch_and_Vision_via_Cross-Modal_Prediction_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Connecting Touch and Vision via Cross-Modal Prediction</a></td>
+<td align="center"></td>
+<td align="center">跨模态生成 (触觉和视觉)</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">香港城市大学 &amp; 国立新加坡</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhu_R2GAN_Cross-Modal_Recipe_Retrieval_With_Generative_Adversarial_Network_CVPR_2019_paper.pdf" target="_blank" rel="noopener">R2GAN: Cross-Modal Recipe Retrieval With Generative Adversarial Network</a></td>
+<td align="center"></td>
+<td align="center">跨模态检索（图像和文本）</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">新加坡管理大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_Learning_Cross-Modal_Embeddings_With_Adversarial_Networks_for_Cooking_Recipes_and_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Learning Cross-Modal Embeddings With Adversarial Networks for Cooking Recipes and Food Images</a></td>
+<td align="center"></td>
+<td align="center">跨模态生成（图像和文本）</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center">纽约哥伦比亚大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Akbari_Multi-Level_Multimodal_Common_Semantic_Space_for_Image-Phrase_Grounding_CVPR_2019_paper.pdf" target="_blank" rel="noopener">Multi-Level Multimodal Common Semantic Space for Image-Phrase Grounding</a></td>
+<td align="center"></td>
+<td align="center">视觉理解 （图像和文本）</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="CVPR-2018">2018</a></td>
+<td align="center">苏黎世联邦理工（ETH Zurich）誉为欧洲第一名校（爱因斯坦）</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Spurr_Cross-Modal_Deep_Variational_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Cross-Modal Deep Variational Hand Pose Estimation</a></td>
+<td align="center"></td>
+<td align="center">跨模态生成 （均为图像）</td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center">facebook</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Fan_Stacked_Latent_Attention_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Stacked Latent Attention for Multimodal Reasoning</a></td>
+<td align="center"></td>
+<td align="center">视觉问答</td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center">美国维拉诺瓦大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Kim_Deep_Sparse_Coding_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Deep Sparse Coding for Invariant Multimodal Halle Berry Neurons</a></td>
+<td align="center"></td>
+<td align="center">神经元的改进</td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center">西安电子科技大学 &amp; 腾讯</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Li_Self-Supervised_Adversarial_Hashing_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Self-Supervised Adversarial Hashing Networks for Cross-Modal Retrieval</a></td>
+<td align="center"></td>
+<td align="center">跨模态检索</td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center">希腊雅典国立技术大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Bouritsas_Multimodal_Visual_Concept_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Multimodal Visual Concept Learning With Weakly Supervised Techniques</a></td>
+<td align="center"></td>
+<td align="center">视频理解（视频和文本）</td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center">新加坡南洋理工 &amp; 阿里巴巴（杭州）</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Gu_Look_Imagine_and_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Look, Imagine and Match: Improving Textual-Visual Cross-Modal Retrieval With Generative Models</a></td>
+<td align="center"></td>
+<td align="center">跨模态检索 （图像和文本）</td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center">中科院自动化所</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_M3_Multimodal_Memory_CVPR_2018_paper.pdf" target="_blank" rel="noopener">M3: Multimodal Memory Modelling for Video Captioning</a></td>
+<td align="center"></td>
+<td align="center">跨模态生成（视频字幕生成）</td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center">牛津大学</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Nagrani_Seeing_Voices_and_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Seeing Voices and Hearing Faces: Cross-Modal Biometric Matching</a></td>
+<td align="center"></td>
+<td align="center">跨模态检索（语音和人脸图像）</td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center">UC 伯克利</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Park_Multimodal_Explanations_Justifying_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Multimodal Explanations: Justifying Decisions and Pointing to the Evidence</a></td>
+<td align="center"></td>
+<td align="center">视觉理解 （视觉问答）</td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center">西门子医疗</td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_Translating_and_Segmenting_CVPR_2018_paper.pdf" target="_blank" rel="noopener">Translating and Segmenting Multimodal Medical Volumes With Cycle- and Shape-Consistency Generative Adversarial Network</a></td>
+<td align="center"></td>
+<td align="center">基于缺失的跨模态生成和分割</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="CVPR-2017">2017</a></td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Nam_Dual_Attention_Networks_CVPR_2017_paper.html" target="_blank" rel="noopener">Dual Attention Networks for Multimodal Reasoning and Matching</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Zhang_Discriminative_Bimodal_Networks_CVPR_2017_paper.html" target="_blank" rel="noopener">Discriminative Bimodal Networks for Visual Localization and Detection With Natural Language Queries</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Tran_Missing_Modalities_Imputation_CVPR_2017_paper.html" target="_blank" rel="noopener">Missing Modalities Imputation via Cascaded Residual Autoencoder</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Baque_Multi-Modal_Mean-Fields_via_CVPR_2017_paper.html" target="_blank" rel="noopener">Multi-Modal Mean-Fields via Cardinality-Based Clamping</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Nakamura_Jointly_Learning_Energy_CVPR_2017_paper.html" target="_blank" rel="noopener">Jointly Learning Energy Expenditures and Activities Using Egocentric Multimodal Signals</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Huang_Instance-Aware_Image_and_CVPR_2017_paper.html" target="_blank" rel="noopener">Instance-Aware Image and Sentence Matching With Selective Multimodal LSTM</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Chen_AMC_Attention_guided_CVPR_2017_paper.html" target="_blank" rel="noopener">AMC: Attention guided Multi-modal Correlation Learning for Image Search</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Salvador_Learning_Cross-Modal_Embeddings_CVPR_2017_paper.html" target="_blank" rel="noopener">Learning Cross-Modal Embeddings for Cooking Recipes and Food Images</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Zhang_Hierarchical_Multimodal_Metric_CVPR_2017_paper.html" target="_blank" rel="noopener">Hierarchical Multimodal Metric Learning for Multimodal Classification</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Jiang_Deep_Cross-Modal_Hashing_CVPR_2017_paper.html" target="_blank" rel="noopener">Deep Cross-Modal Hashing</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Mandal_Generalized_Semantic_Preserving_CVPR_2017_paper.html" target="_blank" rel="noopener">Generalized Semantic Preserving Hashing for N-Label Cross-Modal Retrieval</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Wu_Online_Asymmetric_Similarity_CVPR_2017_paper.html" target="_blank" rel="noopener">Online Asymmetric Similarity Learning for Cross-Modal Retrieval</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Dibra_Human_Shape_From_CVPR_2017_paper.html" target="_blank" rel="noopener">Human Shape From Silhouettes Using Generative HKS Descriptors and Cross-Modal Neural Networks</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Kembhavi_Are_You_Smarter_CVPR_2017_paper.html" target="_blank" rel="noopener">Are You Smarter Than a Sixth Grader? Textbook Question Answering for Multimodal Machine Comprehension</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Wang_Multimodal_Transfer_A_CVPR_2017_paper.html" target="_blank" rel="noopener">Multimodal Transfer: A Hierarchical Deep Convolutional Neural Network for Fast Artistic Style Transfer</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Yang_Learning_to_Extract_CVPR_2017_paper.html" target="_blank" rel="noopener">Learning to Extract Semantic Structure From Documents Using Multimodal Fully Convolutional Neural Networks</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Xu_Learning_Cross-Modal_Deep_CVPR_2017_paper.html" target="_blank" rel="noopener">Learning Cross-Modal Deep Representations for Robust Pedestrian Detection</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Yang_Deep_Multimodal_Representation_CVPR_2017_paper.html" target="_blank" rel="noopener">Deep Multimodal Representation Learning From Temporal Data</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/de_Vries_GuessWhat_Visual_Object_CVPR_2017_paper.html" target="_blank" rel="noopener">GuessWhat?! Visual Object Discovery Through Multi-Modal Dialogue</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Deng_Amodal_Detection_of_CVPR_2017_paper.html" target="_blank" rel="noopener">Amodal Detection of 3D Objects: Inferring 3D Bounding Boxes From 2D Ones in RGB-Depth Images</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Huang_Simultaneous_Super-Resolution_and_CVPR_2017_paper.html" target="_blank" rel="noopener">Simultaneous Super-Resolution and Cross-Modality Synthesis of 3D Medical Images Using Weakly-Supervised Joint Convolutional Sparse Coding</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Tseng_Joint_Sequence_Learning_CVPR_2017_paper.html" target="_blank" rel="noopener">Joint Sequence Learning and Cross-Modality Convolution for 3D Biomedical Segmentation</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Costea_Fast_Boosting_Based_CVPR_2017_paper.html" target="_blank" rel="noopener">Fast Boosting Based Detection Using Scale Invariant Multimodal Multiresolution Filtered Features</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Liu_Cross-Modality_Binary_Code_CVPR_2017_paper.html" target="_blank" rel="noopener">Cross-Modality Binary Code Learning via Fusion Similarity Hashing</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="CVPR-2016">2016</a></td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2016/html/Song_Deep_Sliding_Shapes_CVPR_2016_paper.html" target="_blank" rel="noopener">Deep Sliding Shapes for Amodal 3D Object Detection in RGB-D Images</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2016</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2016/html/Zhang_Collaborative_Quantization_for_CVPR_2016_paper.html" target="_blank" rel="noopener">Collaborative Quantization for Cross-Modal Similarity Search</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2016</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2016/html/Rastegar_MDL-CW_A_Multimodal_CVPR_2016_paper.html" target="_blank" rel="noopener">MDL-CW: A Multimodal Deep Learning Framework With Cross Weights</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2016</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2016/html/Gupta_Cross_Modal_Distillation_CVPR_2016_paper.html" target="_blank" rel="noopener">Cross Modal Distillation for Supervision Transfer</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2016</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2016/html/Castrejon_Learning_Aligned_Cross-Modal_CVPR_2016_paper.html" target="_blank" rel="noopener">Learning Aligned Cross-Modal Representations From Weakly Aligned Data</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2016</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2016/html/Zhu_Discriminative_Multi-Modal_Feature_CVPR_2016_paper.html" target="_blank" rel="noopener">Discriminative Multi-Modal Feature Fusion for RGBD Indoor Scene Recognition</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2016</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2016/html/Zhang_Multimodal_Spontaneous_Emotion_CVPR_2016_paper.html" target="_blank" rel="noopener">Multimodal Spontaneous Emotion Corpus for Human Behavior Analysis</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2016</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2016/html/Hu_Temporal_Multimodal_Learning_CVPR_2016_paper.html" target="_blank" rel="noopener">Temporal Multimodal Learning in Audiovisual Speech Recognition</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2016</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2016/html/Marcos_Geospatial_Correspondences_for_CVPR_2016_paper.html" target="_blank" rel="noopener">Geospatial Correspondences for Multimodal Registration</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2016</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_cvpr_2016/html/Wang_Modality_and_Component_CVPR_2016_paper.html" target="_blank" rel="noopener">Modality and Component Aware Feature Fusion For RGB-D Scene Classification</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p><a href="#顶部">返回顶部</a></p>
+<hr>
+<h2 id="International-Conference-on-Computer-Vision-ICCV"><a href="#International-Conference-on-Computer-Vision-ICCV" class="headerlink" title="International Conference on Computer Vision (ICCV)"></a><a name="ICCV"><em>International Conference on Computer Vision</em> (ICCV)</a></h2><table>
+<thead>
+<tr>
+<th align="center">Year</th>
+<th align="center">Author/mechanism</th>
+<th align="center">Title</th>
+<th align="center">Summary</th>
+<th align="center">Valuable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a name="ICCV-2019">2019</a></td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Zhang_Robust_Multi-Modality_Multi-Object_Tracking_ICCV_2019_paper.pdf" target="_blank" rel="noopener">Robust Multi-Modality Multi-Object Tracking</a></td>
+<td align="center"></td>
+<td align="center">目标跟踪</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Martin_DriveAct_A_Multi-Modal_Dataset_for_Fine-Grained_Driver_Behavior_Recognition_in_ICCV_2019_paper.pdf" target="_blank" rel="noopener">Drive&amp;Act: A Multi-Modal Dataset for Fine-Grained Driver Behavior Recognition in Autonomous Vehicles</a></td>
+<td align="center"></td>
+<td align="center">行为识别</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Su_Deep_Joint-Semantics_Reconstructing_Hashing_for_Large-Scale_Unsupervised_Cross-Modal_Retrieval_ICCV_2019_paper.pdf" target="_blank" rel="noopener">Deep Joint-Semantics Reconstructing Hashing for Large-Scale Unsupervised Cross-Modal Retrieval</a></td>
+<td align="center"></td>
+<td align="center">多模态检索</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_RGB-Infrared_Cross-Modality_Person_Re-Identification_via_Joint_Pixel_and_Feature_Alignment_ICCV_2019_paper.pdf" target="_blank" rel="noopener">RGB-Infrared Cross-Modality Person Re-Identification via Joint Pixel and Feature Alignment</a></td>
+<td align="center"></td>
+<td align="center">person ReID</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Lee_A_Deep_Step_Pattern_Representation_for_Multimodal_Retinal_Image_Registration_ICCV_2019_paper.pdf" target="_blank" rel="noopener">A Deep Step Pattern Representation for Multimodal Retinal Image Registration</a></td>
+<td align="center"></td>
+<td align="center">图像配准</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Zhang_Weakly_Aligned_Cross-Modal_Learning_for_Multispectral_Pedestrian_Detection_ICCV_2019_paper.pdf" target="_blank" rel="noopener">Weakly Aligned Cross-Modal Learning for Multispectral Pedestrian Detection</a></td>
+<td align="center"></td>
+<td align="center">行人检测</td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ICCV_2019/html/Wang_CAMP_Cross-Modal_Adaptive_Message_Passing_for_Text-Image_Retrieval_ICCV_2019_paper.html" target="_blank" rel="noopener">CAMP: Cross-Modal Adaptive Message Passing for Text-Image Retrieval</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ICCV_2019/html/Huang_ACMM_Aligned_Cross-Modal_Memory_for_Few-Shot_Image_and_Sentence_Matching_ICCV_2019_paper.html" target="_blank" rel="noopener">ACMM: Aligned Cross-Modal Memory for Few-Shot Image and Sentence Matching</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ICCV_2019/html/Gao_Multi-Modality_Latent_Interaction_Network_for_Visual_Question_Answering_ICCV_2019_paper.html" target="_blank" rel="noopener">Multi-Modality Latent Interaction Network for Visual Question Answering</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ICCV_2019/html/Zhang_Multimodal_Style_Transfer_via_Graph_Cuts_ICCV_2019_paper.html" target="_blank" rel="noopener">Multimodal Style Transfer via Graph Cuts</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ICCV_2019/html/Laina_Towards_Unsupervised_Image_Captioning_With_Shared_Multimodal_Embeddings_ICCV_2019_paper.html" target="_blank" rel="noopener">Towards Unsupervised Image Captioning With Shared Multimodal Embeddings</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ICCV_2019/html/Ma_Unpaired_Image-to-Speech_Synthesis_With_Multimodal_Information_Bottleneck_ICCV_2019_paper.html" target="_blank" rel="noopener">Unpaired Image-to-Speech Synthesis With Multimodal Information Bottleneck</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ICCV_2019/html/Kundu_GAN-Tree_An_Incrementally_Learned_Hierarchical_Generative_Framework_for_Multi-Modal_Data_ICCV_2019_paper.html" target="_blank" rel="noopener">GAN-Tree: An Incrementally Learned Hierarchical Generative Framework for Multi-Modal Data Distributions</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ICCV_2019/html/Kong_MMAct_A_Large-Scale_Dataset_for_Cross_Modal_Human_Action_Understanding_ICCV_2019_paper.html" target="_blank" rel="noopener">MMAct: A Large-Scale Dataset for Cross Modal Human Action Understanding</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ICCV_2019/html/Rahman_Watch_Listen_and_Tell_Multi-Modal_Weakly_Supervised_Dense_Event_Captioning_ICCV_2019_paper.html" target="_blank" rel="noopener">Watch, Listen and Tell: Multi-Modal Weakly Supervised Dense Event Captioning</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ICCV_2019/html/Sun_DUAL-GLOW_Conditional_Flow-Based_Generative_Model_for_Modality_Transfer_ICCV_2019_paper.html" target="_blank" rel="noopener">DUAL-GLOW: Conditional Flow-Based Generative Model for Modality Transfer</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="ICCV-2017">2017</a></td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_iccv_2017/html/Liu_Recurrent_Multimodal_Interaction_ICCV_2017_paper.html" target="_blank" rel="noopener">Recurrent Multimodal Interaction for Referring Image Segmentation</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_iccv_2017/html/Yu_Multi-Modal_Factorized_Bilinear_ICCV_2017_paper.html" target="_blank" rel="noopener">Multi-Modal Factorized Bilinear Pooling With Co-Attention Learning for Visual Question Answering</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_iccv_2017/html/Niu_Hierarchical_Multimodal_LSTM_ICCV_2017_paper.html" target="_blank" rel="noopener">Hierarchical Multimodal LSTM for Dense Visual-Semantic Embedding</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_iccv_2017/html/Ben-younes_MUTAN_Multimodal_Tucker_ICCV_2017_paper.html" target="_blank" rel="noopener">MUTAN: Multimodal Tucker Fusion for Visual Question Answering</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_iccv_2017/html/Shibata_Misalignment-Robust_Joint_Filter_ICCV_2017_paper.html" target="_blank" rel="noopener">Misalignment-Robust Joint Filter for Cross-Modal Image Pairs</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_iccv_2017/html/Liong_Cross-Modal_Deep_Variational_ICCV_2017_paper.html" target="_blank" rel="noopener">Cross-Modal Deep Variational Hashing</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_iccv_2017/html/Liu_Learning_a_Recurrent_ICCV_2017_paper.html" target="_blank" rel="noopener">Learning a Recurrent Residual Fusion Network for Multimodal Matching</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_iccv_2017/html/Hori_Attention-Based_Multimodal_Fusion_ICCV_2017_paper.html" target="_blank" rel="noopener">Attention-Based Multimodal Fusion for Video Description</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_iccv_2017/html/Song_Multimodal_Gaussian_Process_ICCV_2017_paper.html" target="_blank" rel="noopener">Multimodal Gaussian Process Latent Variable Models With Harmonization</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_iccv_2017/html/Gan_A_Multimodal_Deep_ICCV_2017_paper.html" target="_blank" rel="noopener">A Multimodal Deep Regression Bayesian Network for Affective Video Content Analyses</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_iccv_2017/html/Wu_RGB-Infrared_Cross-Modality_Person_ICCV_2017_paper.html" target="_blank" rel="noopener">RGB-Infrared Cross-Modality Person Re-Identification</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p><a href="#顶部">返回顶部</a></p>
+<hr>
+<h2 id="European-Conference-on-Computer-Vision-ECCV"><a href="#European-Conference-on-Computer-Vision-ECCV" class="headerlink" title="European Conference on Computer Vision (ECCV)"></a><a name="ECCV"><em>European Conference on Computer Vision</em> (ECCV)</a></h2><table>
+<thead>
+<tr>
+<th align="center">Year</th>
+<th align="center">Author/mechanism</th>
+<th align="center">Title</th>
+<th align="center">Summary</th>
+<th align="center">Valuable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a name="ECCV-2020">2020</a></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="ECCV-2018">2018</a></td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ECCV_2018/html/Samuel_Albanie_Learnable_PINs_Cross-Modal_ECCV_2018_paper.html" target="_blank" rel="noopener">Learnable PINs: Cross-Modal Embeddings for Person Identity</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ECCV_2018/html/Xun_Huang_Multimodal_Unsupervised_Image-to-image_ECCV_2018_paper.html" target="_blank" rel="noopener">Multimodal Unsupervised Image-to-image Translation</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ECCV_2018/html/Yue_Cao_Cross-Modal_Hamming_Hashing_ECCV_2018_paper.html" target="_blank" rel="noopener">Cross-Modal Hamming Hashing</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ECCV_2018/html/Bowen_Zhang_Cross-Modal_and_Hierarchical_ECCV_2018_paper.html" target="_blank" rel="noopener">Cross-Modal and Hierarchical Modeling of Video and Text</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ECCV_2018/html/Jiaxin_Chen_Deep_Cross-modality_Adaptation_ECCV_2018_paper.html" target="_blank" rel="noopener">Deep Cross-modality Adaptation via Semantics Preserving Adversarial Learning for Sketch-based 3D Shape Retrieval</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ECCV_2018/html/Xinchen_Yan_Generating_Multimodal_Human_ECCV_2018_paper.html" target="_blank" rel="noopener">MT-VAE: Learning Motion Transformations to Generate Multimodal Human Dynamics</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ECCV_2018/html/Xi_Zhang_Attention-aware_Deep_Adversarial_ECCV_2018_paper.html" target="_blank" rel="noopener">Attention-aware Deep Adversarial Hashing for Cross-Modal Retrieval</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ECCV_2018/html/Ying_Zhang_Deep_Cross-Modal_Projection_ECCV_2018_paper.html" target="_blank" rel="noopener">Deep Cross-Modal Projection Learning for Image-Text Matching</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ECCV_2018/html/Kyungmin_Kim_Multimodal_Dual_Attention_ECCV_2018_paper.html" target="_blank" rel="noopener">Multimodal Dual Attention Memory for Video Story Question Answering</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ECCV_2018/html/Edgar_Margffoy-Tuay_Dynamic_Multimodal_Instance_ECCV_2018_paper.html" target="_blank" rel="noopener">Dynamic Multimodal Instance Segmentation Guided by Natural Language Queries</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ECCV_2018/html/Chenglong_Li_Cross-Modal_Ranking_with_ECCV_2018_paper.html" target="_blank" rel="noopener">Cross-Modal Ranking with Soft Consistency and Noisy Labels for Robust RGB-T Tracking</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ECCV_2018/html/Sunghun_Kang_Pivot_Correlational_Neural_ECCV_2018_paper.html" target="_blank" rel="noopener">Pivot Correlational Neural Network for Multimodal Video Categorization</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ECCV_2018/html/RAFAEL_FELIX_Multi-modal_Cycle-consistent_Generalized_ECCV_2018_paper.html" target="_blank" rel="noopener">Multi-modal Cycle-consistent Generalized Zero-Shot Learning</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="http://openaccess.thecvf.com/content_ECCV_2018/html/Armand_Zampieri_Multimodal_image_alignment_ECCV_2018_paper.html" target="_blank" rel="noopener">Multimodal image alignment through a multiscale chain of neural networks with application to remote sensing</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p><a href="#顶部">返回顶部</a></p>
+<hr>
+<h2 id="International-Joint-Conferences-on-Artifical-Intelligence-IJCAI"><a href="#International-Joint-Conferences-on-Artifical-Intelligence-IJCAI" class="headerlink" title="International Joint Conferences on Artifical Intelligence (IJCAI)"></a><a name="IJCAI"><em>International Joint Conferences on Artifical Intelligence</em> (IJCAI)</a></h2><table>
+<thead>
+<tr>
+<th align="center">Year</th>
+<th align="center">Author/mechanism</th>
+<th align="center">Title</th>
+<th align="center">Summary</th>
+<th align="center">Valuable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a name="IJCAI-2020">2020</a></td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>A Similarity Inference Metric for RGB-Infrared Cross-Modality Person Re-identificatio</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>EViLBERT: Learning Task-Agnostic Multimodal Sense Embeddings</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Mucko: Multi-Layer Cross-Modal Knowledge Reasoning for Fact-based Visual Question Answering</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Set and Rebase: Determining the Semantic Graph Connectivity for Unsupervised Cross-Modal Hashing</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Embodied Multimodal Multitask Learning</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Triple-GAIL: A Multi-Modal Imitation Learning Framework with Generative Adversarial Nets</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Modeling Dense Cross-Modal Interactions for Joint Entity-Relation Extraction</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Interpretable Multimodal Learning for Intelligent Regulation in Online Payment Systems</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="IJCAI-2019">2019</a></td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2019/0138.pdf" target="_blank" rel="noopener"><strong>Graph Convolutional Network Hashing for Cross-Modal Retrieval</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2019/0153.pdf" target="_blank" rel="noopener"><strong>Solving the Satisfiability Problem of Modal Logic S5 Guided by Graph Coloring</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2019/0292.pdf" target="_blank" rel="noopener"><strong>Extensible Cross-Modal Hashing</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2019/0299.pdf" target="_blank" rel="noopener"><strong>Success Prediction on Crowdfunding with Multimodal Deep Learning</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2019/0431.pdf" target="_blank" rel="noopener"><strong>AttnSense: Multi-level Attention Mechanism For Multimodal Human Activity Recognition</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2019/0490.pdf" target="_blank" rel="noopener"><strong>Metric Learning on Healthcare Data with Incomplete Modalities</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2019/0503.pdf" target="_blank" rel="noopener"><strong>DeepCU: Integrating both Common and Unique Latent Information for Multimodal Sentiment Analysis</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2019/0568.pdf" target="_blank" rel="noopener"><strong>Comprehensive Semi-Supervised Multi-Modal Learning</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2019/0662.pdf" target="_blank" rel="noopener"><strong>Equally-Guided Discriminative Hashing for Cross-modal Retrieval</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2019/0708.pdf" target="_blank" rel="noopener"><strong>Exploring and Distilling Cross-Modal Information for Image Captioning</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2019/0751.pdf" target="_blank" rel="noopener"><strong>Adapting BERT for Target-Oriented Multimodal Sentiment Classification</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2019/0823.pdf" target="_blank" rel="noopener"><strong>MNN: Multimodal Attentional Neural Networks for Diagnosis Prediction</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2019/0940.pdf" target="_blank" rel="noopener"><strong>Embodied Conversational AI Agents in a Multi-modal Multi-agent Competitive Dialogue</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="IJCAI-2018">2018</a></td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2018/0094.pdf" target="_blank" rel="noopener"><strong>Cross-Modality Person Re-Identification with Generative Adversarial Training</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2018/0096.pdf" target="_blank" rel="noopener"><strong>Unsupervised Cross-Modality Domain Adaptation of ConvNets for Biomedical Image Segmentations with Adversarial Loss</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2018/0122.pdf" target="_blank" rel="noopener"><strong>MEGAN: Mixture of Experts of Generative Adversarial Networks for Multimodal Image Generation</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2018/0143.pdf" target="_blank" rel="noopener"><strong>Multi-modal Circulant Fusion for Video-to-Language and Backward</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2018/0214.pdf" target="_blank" rel="noopener"><strong>Deep Learning Based Multi-modal Addressee Recognition in Visual Scenes with Utterances</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2018/0349.pdf" target="_blank" rel="noopener"><strong>SDMCH: Supervised Discrete Manifold-Embedded Cross-Modal Hashing</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2018/0365.pdf" target="_blank" rel="noopener"><strong>Cross-modal Bidirectional Translation via Reinforcement Learning</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2018/0396.pdf" target="_blank" rel="noopener"><strong>Unsupervised Deep Hashing via Binary Latent Factor Models for Large-scale Cross-modal Retrieval</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2018/0416.pdf" target="_blank" rel="noopener"><strong>Semi-Supervised Multi-Modal Learning with Incomplete Modalities</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2018/0432.pdf" target="_blank" rel="noopener"><strong>Multi-modality Sensor Data Classification with Selective Attention</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2018/0472.pdf" target="_blank" rel="noopener"><strong>Interpretable Recommendation via Attraction Modeling: Learning Multilevel Attractiveness over Multimodal Movie Contents</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2018/0577.pdf" target="_blank" rel="noopener"><strong>Multi-modal Sentence Summarization with Modality Attention and Image Filtering</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2018/0645.pdf" target="_blank" rel="noopener"><strong>Multi-modal Predicate Identification using Dynamically Learned Robot Controllers</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="IJCAI-2017">2017</a></td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2017/0238.pdf" target="_blank" rel="noopener"><strong>Extracting Visual Knowledge from the Web with Multimodal Learning</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2017/0263.pdf" target="_blank" rel="noopener"><strong>Cross-modal Common Representation Learning by Hybrid Transfer Network</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2017/0459.pdf" target="_blank" rel="noopener"><strong>Modal Consistency based Pre-Trained Multi-Model Reuse</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2017/0476.pdf" target="_blank" rel="noopener"><strong>Adaptively Unified Semi-supervised Learning for Cross-Modal Retrieval</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2017/0478.pdf" target="_blank" rel="noopener"><strong>Hashtag Recommendation for Multimodal Microblog Using Co-Attention Network</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2017/0482.pdf" target="_blank" rel="noopener"><strong>Multimodal Linear Discriminant Analysis via Structural Sparsity</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2017/0514.pdf" target="_blank" rel="noopener"><strong>DeepAM: Migrate APIs with Multi-modal Sequence to Sequence Learning</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2017/0536.pdf" target="_blank" rel="noopener"><strong>Depression Detection via Harvesting Social Media: A Multimodal Dictionary Learning Solution</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2017/0554.pdf" target="_blank" rel="noopener"><strong>Multimodal Storytelling via Generative Adversarial Imitation Learning</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2017/0563.pdf" target="_blank" rel="noopener"><strong>MAT: A Multimodal Attentive Translator for Image Captioning</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2017/0575.pdf" target="_blank" rel="noopener"><strong>Multi-Modal Word Synset Induction</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2017/0626.pdf" target="_blank" rel="noopener"><strong>Dual Track Multimodal Automatic Learning through Human-Robot Interaction</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2017/0651.pdf" target="_blank" rel="noopener"><strong>Approximating Discrete Probability Distribution of Image Emotions by Multi-Modal Features Fusion</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2017/0694.pdf" target="_blank" rel="noopener"><strong>KSP: A Resolution-based Prover for Multimodal K, Abridged Report</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/2017/0737.pdf" target="_blank" rel="noopener"><strong>Multimodal News Article Analysis</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="IJCAI-2016">2016</a></td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/16/Papers/249.pdf" target="_blank" rel="noopener"><strong>Group-Invariant Cross-Modal Subspace Learning</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2016</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/16/Papers/253.pdf" target="_blank" rel="noopener"><strong>Supervised Matrix Factorization for Cross-Modality Hashing</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2016</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/16/Papers/260.pdf" target="_blank" rel="noopener"><strong>Multi-Grained Role Labeling Based on Multi-Modality Information for Real Customer Service Telephone Conversation</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2016</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/16/Papers/326.pdf" target="_blank" rel="noopener"><strong>Multi-Modal Bayesian Embeddings for Learning Social Knowledge Graphs</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2016</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/16/Papers/341.pdf" target="_blank" rel="noopener"><strong>Incomplete Multi-Modal Visual Data Grouping</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2016</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/16/Papers/473.pdf" target="_blank" rel="noopener"><strong>Semi-Supervised Multimodal Deep Learning for RGB-D Object Recognition</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2016</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/16/Papers/491.pdf" target="_blank" rel="noopener"><strong>Learning Multi-Modal Grounded Linguistic Semantics by Playing “I Spy”</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><a href="">****</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="IJCAI-2015">2015</a></td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/15/Papers/150.pdf" target="_blank" rel="noopener"><strong>Auxiliary Information Regularized Machine for Multiple Modality Feature Learning</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2015</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/15/Papers/275.pdf" target="_blank" rel="noopener"><strong>Multi-Modality Tracker Aggregation: From Generative to Discriminative</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2015</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/15/Papers/307.pdf" target="_blank" rel="noopener"><strong>Social Image Parsing by Cross-Modal Data Refinement</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2015</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/15/Papers/324.pdf" target="_blank" rel="noopener"><strong>Deep Multimodal Hashing with Orthogonal Regularization</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2015</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/15/Papers/546.pdf" target="_blank" rel="noopener"><strong>Semantic Topic Multimodal Hashing for Cross-Media Retrieval</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2015</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/15/Papers/548.pdf" target="_blank" rel="noopener"><strong>Learning to Hash on Partial Multi-Modal Data</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2015</td>
+<td align="center"></td>
+<td align="center"><a href="https://www.ijcai.org/Proceedings/15/Papers/554.pdf" target="_blank" rel="noopener"><strong>Quantized Correlation Hashing for Fast Cross-Modal Search</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><a href="">****</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><a href="">****</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><a href="">****</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p><a href="#顶部">返回顶部</a></p>
+<hr>
+<h2 id="The-Association-for-the-Advance-of-Artificial-Intelligence-AAAI"><a href="#The-Association-for-the-Advance-of-Artificial-Intelligence-AAAI" class="headerlink" title="The Association for the Advance of Artificial Intelligence (AAAI)"></a><a name="AAAI"><em>The Association for the Advance of Artificial Intelligence</em> (AAAI)</a></h2><table>
+<thead>
+<tr>
+<th align="center">Year</th>
+<th align="center">Author/mechanism</th>
+<th align="center">Title</th>
+<th align="center">Summary</th>
+<th align="center">Valuable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a name="AAAI-2020">2020</a></td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>MULE: Multimodal Universal Language Embedding</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Infrared-Visible Cross-Modal Person Re-Identification with an X Modality</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Aspect-Aware Multimodal Summarization for Chinese E-commerce Products</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Multimodal Summarization with Guidance of Multimodal Reference</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Learning Cross-modal Context Graph Networks for Visual Grounding</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Adaptive Cross-modal Embeddings for Image-Text Alignment</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Cross-Modality Paired-Images Generation for RGB-Infrared Person Re-Identification</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Cross-Modality Attention with Semantic Graph Embedding for Multi-Label Classification</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href="">*<em>Learning Long- and Short-Term User Literal-Preference with Multimodal Hierarchical Transformer Network  for Personalized Image Caption *</em></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Towards Cross-modality Medical Image Segmentation with Online Mutual Knowledge Distillation</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Multimodal Structure-Consistent Image-to-Image Translation</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Cross-Modal Subspace Clustering via Deep Canonical Correlation Analysis</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Semi-supervised Multi-modal Learning with Balanced Spectral Decomposition</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Cross-Modality Attention Network for Temporal Inconsistent Audio-Visual Event Localization</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Unicoder-VL: A Universal Encoder for Vision and Language by Cross-modal Pre-training</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Privacy Enhanced Multimodal Neural Representations for Emotion Recognition</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Factorized Inference in Deep Markov Models for Incomplete Multimodal Time Series</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>M3ER: Multiplicative Multimodal Emotion Recognition Using Facial, Textual, and Speech Cues</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Learning Cross-Aligned Latent Embeddings for Zero-Shot Cross-Modal Retrieval</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Urban2Vec: Incorporating Street View Imagery and POIs for Multi-Modal Urban Neighborhood Embedding</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Learning Relationships between Text, Audio, and Video via Deep Canonical Correlation for Multimodal Language Analysis</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Attention-based Multi-modal Fusion Network for Semantic Scene Completion</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Modality-Balanced Models for Visual Dialogue</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Visual Agreement Regularized Training for Multi-Modal Machine Translation</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>ManyModalQA: Modality Disambiguation and QA over Diverse Inputs</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Learning Multi-Modal Biomarker Representations via Globally Aligned Longitudinal Enrichments</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Modality to Modality Translation: An Adversarial Representation Learning and Graph Fusion Network for Multimodal Fusion</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Multimodal Interaction-Aware Trajectory Prediction in Crowded Space</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href=""><strong>Mining on Heterogeneous Manifolds for Zero-shot Cross-modal Image Retrieval</strong></a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="AAAI-2019">2019</a></td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ojs/index.php/AAAI/article/view/3775" target="_blank" rel="noopener">Cooperative Multimodal Approach to Depression Detection in Twitter</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ojs/index.php/AAAI/article/view/3777" target="_blank" rel="noopener">Y2Seq2Seq: Cross-Modal Representation Learning for 3D Shape and Text by Joint Reconstruction and Prediction of View and Word Sequences</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ojs/index.php/AAAI/article/view/3783" target="_blank" rel="noopener">Coupled CycleGAN: Unsupervised Hashing Network for Cross-Modal Retrieval</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ojs/index.php/AAAI/article/view/3799" target="_blank" rel="noopener">VistaNet: Visual Aspect Attention Network for Multimodal Sentiment Analysis</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ojs/index.php/AAAI/article/view/3807" target="_blank" rel="noopener">Multi-Interactive Memory Network for Aspect Based Multimodal Sentiment Analysis</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ojs/index.php/AAAI/article/view/3874" target="_blank" rel="noopener">Synergistic Image and Feature Adaptation: Towards Cross-Modality Domain Adaptation for Medical Image Segmentation</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ojs/index.php/AAAI/article/view/3894" target="_blank" rel="noopener">Joint Representation Learning for Multi-Modal Transportation Recommendation</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ojs/index.php/AAAI/article/view/3897" target="_blank" rel="noopener">Play as You Like: Timbre-Enhanced Multi-Modal Music Style Transfer</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ojs/index.php/AAAI/article/view/4071" target="_blank" rel="noopener">On the Time Complexity of Algorithm Selection Hyper-Heuristics for Multimodal Optimisation</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ojs/index.php/AAAI/article/view/4134" target="_blank" rel="noopener">Disjunctive Normal Form for Multi-Agent Modal Logics Based on Logical Separability</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ojs/index.php/AAAI/article/view/4351" target="_blank" rel="noopener">Ranking-Based Deep Cross-Modal Hashing</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ojs/index.php/AAAI/article/view/4464" target="_blank" rel="noopener">An Efficient Approach to Informative Feature Extraction from Multimodal Data</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ojs/index.php/AAAI/article/view/4509" target="_blank" rel="noopener">Deep Robust Unsupervised Multi-Modal Network</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ojs/index.php/AAAI/article/view/4666" target="_blank" rel="noopener">Found in Translation: Learning Robust Joint Representations by Cyclic Translations between Modalities</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ojs/index.php/AAAI/article/view/4831" target="_blank" rel="noopener">Unsupervised Bilingual Lexicon Induction from Mono-Lingual Multimodal Data</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ojs/index.php/AAAI/article/view/4952" target="_blank" rel="noopener">ACM: Adaptive Cross-Modal Graph Convolutional Neural Networks for RGB-D Scene Recognition</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ojs/index.php/AAAI/article/view/5165" target="_blank" rel="noopener">Dynamically Identifying Deep Multimodal Features for Image Privacy Prediction</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="AAAI-2018">2018</a></td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16911" target="_blank" rel="noopener">Synthesis of Programs from Multimodal Datasets</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16449" target="_blank" rel="noopener">Dual Deep Neural Networks Cross-Modal Hashing</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/17108" target="_blank" rel="noopener">Spatiotemporal Activity Modeling Under Data Scarcity: A Graph-Regularized Cross-Modal Embedding Approach</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16746" target="_blank" rel="noopener">Unsupervised Generative Adversarial Cross-Modal Hashing</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/17104" target="_blank" rel="noopener">Towards Building Large Scale Multimodal Domain-Aware Conversation Systems</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16235" target="_blank" rel="noopener">Multi-Modal Multi-Task Learning for Automatic Dietary Assessment</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16207" target="_blank" rel="noopener">Multimodal Poisson Gamma Belief Network</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16919" target="_blank" rel="noopener">AJILE Movement Prediction: Multimodal Deep Learning for Natural Human Neural Recordings and Video</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16091" target="_blank" rel="noopener">Perception Coordination Network: A Framework for Online Multi-Modal Concept Acquisition and Binding</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16656" target="_blank" rel="noopener">Placing Objects in Gesture Space: Toward Incremental Interpretation of Multimodal Spatial Descriptions</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16166" target="_blank" rel="noopener">Efficient Large-Scale Multi-Modal Classification</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16512" target="_blank" rel="noopener">Guiding Exploratory Behaviors for Multi-Modal Grounding of Linguistic Descriptions</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16113" target="_blank" rel="noopener">Learning Multi-Modal Word Representation Grounded in Visual Context</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16169" target="_blank" rel="noopener">Investigating Inner Properties of Multimodal Representation and Semantic Compositionality with Brain-Based Componential Semantics</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16167" target="_blank" rel="noopener">Learning Multimodal Word Representation via Dynamic Fusion Methods</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/17153" target="_blank" rel="noopener">CMCGAN: A Uniform Framework for Cross-Modal Visual-Audio Mutual Generation</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/17054" target="_blank" rel="noopener">Multimodal Keyless Attention Fusion for Video Classification</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16249" target="_blank" rel="noopener">Co-Attending Free-Form Regions and Detections with Multi-Modal Multiplicative Feature Embedding for Visual Question Answering</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16703" target="_blank" rel="noopener">Gesture Annotation with a Visual Search Engine for Multimodal Communication Research</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16579" target="_blank" rel="noopener">Is a Picture Worth a Thousand Words? A Deep Multi-Modal Architecture for Product Classification in E-Commerce</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16415" target="_blank" rel="noopener">Predicting Depression Severity by Multi-Modal Feature Engineering and Fusion</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16643" target="_blank" rel="noopener">Water Advisor - A Data-Driven, Multi-Modal, Contextual Assistant to Help with Water Usage Decisions</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="AAAI-2017">2017</a></td>
+<td align="center"></td>
+<td align="center"><a href="http://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14561" target="_blank" rel="noopener">Towards Better Understanding the Clothing Fashion Styles: A Multimodal Deep Learning Approach</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14326" target="_blank" rel="noopener">Pairwise Relationship Guided Deep Hashing for Cross-Modal Retrieval</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14205" target="_blank" rel="noopener">Exploring Commonality and Individuality for Multi-Modal Curriculum Learning</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14499" target="_blank" rel="noopener">Collective Deep Quantization for Efficient Cross-Modal Retrieval</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14811" target="_blank" rel="noopener">Imagined Visual Representations as Multimodal Embeddings</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14831" target="_blank" rel="noopener">Multimodal Fusion of EEG and Musical Features in Music-Emotion Recognition</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2017</td>
+<td align="center"></td>
+<td align="center"><a href="http://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14661" target="_blank" rel="noopener">Webly-Supervised Learning of Multimodal Video Detectors</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="AAAI-2016">2016</a></td>
+<td align="center"></td>
+<td align="center"><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/12217" target="_blank" rel="noopener">Business-Aware Visual Concept Discovery from Social Media for Multimodal Business Venue Recognition</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2016</td>
+<td align="center"></td>
+<td align="center"><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/12125" target="_blank" rel="noopener">Online Cross-Modal Hashing for Web Image Retrieval</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2016</td>
+<td align="center"></td>
+<td align="center"><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/11845" target="_blank" rel="noopener">Co-Regularized PLSA for Multi-Modal Learning</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2016</td>
+<td align="center"></td>
+<td align="center"><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/12165" target="_blank" rel="noopener">Zero-Shot Event Detection by Multimodal Distributional Semantic Embedding of Videos</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2016</td>
+<td align="center"></td>
+<td align="center"><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/12386" target="_blank" rel="noopener">Look, Listen and Learn — A Multimodal LSTM for Speaker Identification</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2016</td>
+<td align="center"></td>
+<td align="center"><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/12082" target="_blank" rel="noopener">Multi-Modal Learning over User-Contributed Content from Cross-Domain Social Media</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a name="AAAI-2015">2015</a></td>
+<td align="center"></td>
+<td align="center"><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/view/9580" target="_blank" rel="noopener">Cross-Modal Image Clustering via Canonical Correlation Analysis</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2015</td>
+<td align="center"></td>
+<td align="center"><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/view/9546" target="_blank" rel="noopener">Tackling Mental Health by Integrating Unobtrusive Multimodal Sensing</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2015</td>
+<td align="center"></td>
+<td align="center"><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/view/9648" target="_blank" rel="noopener">Cross-Modal Similarity Learning via Pairs, Preferences, and Active Supervision</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2015</td>
+<td align="center"></td>
+<td align="center"><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/view/9565" target="_blank" rel="noopener">“Is It Rectangular?” Using I Spy as an Interactive, Game-Based Approach to Multimodal Robot Learning</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p><a href="#顶部">返回顶部</a></p>
+<hr>
+<h2 id="IEEE-Transactions-on-Pattern-Analysis-and-Machine-Intelligence-T-PAMI"><a href="#IEEE-Transactions-on-Pattern-Analysis-and-Machine-Intelligence-T-PAMI" class="headerlink" title="IEEE Transactions on Pattern Analysis and Machine Intelligence (T-PAMI)"></a><a name="T-PAMI"><em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em> (T-PAMI)</a></h2><table>
+<thead>
+<tr>
+<th align="center">Year</th>
+<th align="center">Author/mechanism</th>
+<th align="center">Title</th>
+<th align="center">Summary</th>
+<th align="center">Valuable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><strong>Label Consistent Matrix Factorization Hashing for Large-Scale Cross-Modal Similarity Search</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><strong>Towards Personalized Image Captioning via Multimodal Memory Networks</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><strong>Multimodal Machine Learning: A Survey and Taxonomy</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><strong>Learning Compositional Sparse Bimodal Models</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><strong>Deep Multimodal Feature Analysis for Action Recognition in RGB+D Videos</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><strong>Hetero-Manifold Regularisation for Cross-Modal Hashing</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><strong>A Multi-Modal, Discriminative and Spatially Invariant CNN for RGB-D Object Labeling</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><strong>Cross-Modal Scene Networks</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p><a href="#顶部">返回顶部</a></p>
+<hr>
+<h2 id="International-Journal-of-Computer-Vision-IJCV"><a href="#International-Journal-of-Computer-Vision-IJCV" class="headerlink" title="International Journal of Computer Vision (IJCV)"></a><a name="IJCV"><em>International Journal of Computer Vision</em> (IJCV)</a></h2><table>
+<thead>
+<tr>
+<th align="center">Year</th>
+<th align="center">Author/mechanism</th>
+<th align="center">Title</th>
+<th align="center">Summary</th>
+<th align="center">Valuable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href="https://link.springer.com/article/10.1007/s11263-019-01290-1" target="_blank" rel="noopener">RGB-IR Person Re-identification by Cross-Modality Similarity Preservation</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2020</td>
+<td align="center"></td>
+<td align="center"><a href="https://link.springer.com/article/10.1007/s11263-019-01188-y" target="_blank" rel="noopener">Self-Supervised Model Adaptation for Multimodal Semantic Segmentation</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2019</td>
+<td align="center"></td>
+<td align="center"><a href="https://link.springer.com/article/10.1007/s11263-019-01200-5" target="_blank" rel="noopener">Motion-Compensated Spatio-Temporal Filtering for Multi-Image and Multimodal Super-Resolution</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2018</td>
+<td align="center"></td>
+<td align="center"><a href="https://link.springer.com/article/10.1007/s11263-017-0997-7" target="_blank" rel="noopener">Deep Multimodal Fusion: A Hybrid Approach</a></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p><a href="#顶部">返回顶部</a></p>
+<hr>
+
+    </div>
+
+    
+    
+    
+       <div>
+  <div style="text-align:center;color: #888888;font-size:30px;">
+     ------ 本文结束<i class="fa fa-paw"></i>感谢您的阅读 ------
+  </div>
+
+       </div>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/multi-modal/" rel="tag"># multi-modal</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/06/03/Ubuntu16.04%20Hexo%20%E6%90%AD%E5%BB%BA%20%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/" rel="prev" title="Ubuntu16.04 Hexo 搭建个人主页">
+      <i class="fa fa-chevron-left"></i> Ubuntu16.04 Hexo 搭建个人主页
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/09/26/hello-world/" rel="next" title="Hello World">
+      Hello World <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#近3年多模态相关论文列表-（2018-2020）"><span class="nav-number">1.</span> <span class="nav-text">近3年多模态相关论文列表 （2018-2020）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#key-word-关键字"><span class="nav-number">1.1.</span> <span class="nav-text">key word 关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多模态应用场景"><span class="nav-number">1.2.</span> <span class="nav-text">多模态应用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#点击跳转"><span class="nav-number">1.3.</span> <span class="nav-text">点击跳转</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#International-Conference-on-Learning-Representations-ICLR"><span class="nav-number">1.4.</span> <span class="nav-text">International Conference on Learning Representations (ICLR)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#International-Conference-on-Machine-Learning-ICML"><span class="nav-number">1.5.</span> <span class="nav-text">International Conference on Machine Learning (ICML)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Neural-Information-Processing-Systems-NIPS"><span class="nav-number">1.6.</span> <span class="nav-text">Neural Information Processing Systems (NIPS)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2016Computer-Vision-and-Pattern-Recognition-CVPR"><span class="nav-number">1.7.</span> <span class="nav-text">2016Computer Vision and Pattern Recognition (CVPR)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#International-Conference-on-Computer-Vision-ICCV"><span class="nav-number">1.8.</span> <span class="nav-text">International Conference on Computer Vision (ICCV)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#European-Conference-on-Computer-Vision-ECCV"><span class="nav-number">1.9.</span> <span class="nav-text">European Conference on Computer Vision (ECCV)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#International-Joint-Conferences-on-Artifical-Intelligence-IJCAI"><span class="nav-number">1.10.</span> <span class="nav-text">International Joint Conferences on Artifical Intelligence (IJCAI)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Association-for-the-Advance-of-Artificial-Intelligence-AAAI"><span class="nav-number">1.11.</span> <span class="nav-text">The Association for the Advance of Artificial Intelligence (AAAI)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IEEE-Transactions-on-Pattern-Analysis-and-Machine-Intelligence-T-PAMI"><span class="nav-number">1.12.</span> <span class="nav-text">IEEE Transactions on Pattern Analysis and Machine Intelligence (T-PAMI)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#International-Journal-of-Computer-Vision-IJCV"><span class="nav-number">1.13.</span> <span class="nav-text">International Journal of Computer Vision (IJCV)</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Boyu ZHAO"
+      src="/images/lufei.jpg">
+  <p class="site-author-name" itemprop="name">Boyu ZHAO</p>
+  <div class="site-description" itemprop="description">Master of computer science, Tianjin University</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zby-universal" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zby-universal" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/geloapire@gmail.com" title="E-Mail → geloapire@gmail.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/univers30112523" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;univers30112523" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/profile.php?id=100034160626830" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;profile.php?id&#x3D;100034160626830" rel="noopener" target="_blank"><i class="fab fa-facebook fa-fw"></i>FB Page</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Boyu ZHAO</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
