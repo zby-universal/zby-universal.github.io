@@ -27,7 +27,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/2020/02/02/images/Adversarial%20Incomplete%20Multi-view%20Clustering-1.png">
 <meta property="article:published_time" content="2020-02-02T05:37:19.000Z">
-<meta property="article:modified_time" content="2020-06-04T05:52:10.000Z">
+<meta property="article:modified_time" content="2020-09-26T03:44:02.361Z">
 <meta property="article:author" content="Boyu ZHAO">
 <meta property="article:tag" content="multi-view">
 <meta property="article:tag" content="clustering">
@@ -194,7 +194,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-04 13:52:10" itemprop="dateModified" datetime="2020-06-04T13:52:10+08:00">2020-06-04</time>
+                <time title="Modified: 2020-09-26 11:44:02" itemprop="dateModified" datetime="2020-09-26T11:44:02+08:00">2020-09-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -230,7 +230,6 @@
 
 
 <a id="more"></a>
-
 <p>思路：</p>
 <ul>
 <li>每个视图分别用编码器$f_v(\cdot)$学习相同维度high-level的特征表示 $\mathbf{z}^{(v)}$</li>
@@ -493,6 +492,61 @@
 
 
   
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
